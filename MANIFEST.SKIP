@@ -12,6 +12,7 @@
 \bMYMETA\.
 
 # Avoid Makemaker generated and utility files.
+\bMANIFEST\.SKIP\b
 \bMANIFEST\.bak
 \bMakefile$
 \bblib/
