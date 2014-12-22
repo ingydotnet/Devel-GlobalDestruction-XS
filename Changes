@@ -1,3 +1,7 @@
+0.03  2014-12-22
+  * Don't skip our C code file
+0.02  2014-12-22
+  * Add MANIFEST.SKIP to MANIFEST.SKIP
 0.01  2014-12-22
   * Converted to Inline::Module
   * Original git://git.shadowcat.co.uk/p5sagit/Devel-GlobalDestruction-XS.git
