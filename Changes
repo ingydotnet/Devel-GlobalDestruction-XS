@@ -1,2 +1,5 @@
-0.01  2013-03-08 13:48 (UTC)
-  * Extracted XS code from Devel-GlobalDestruction to keep FatPacker happy
+0.01  2014-12-22
+  * Converted to Inline::Module
+  * Original git://git.shadowcat.co.uk/p5sagit/Devel-GlobalDestruction-XS.git
+  * https://metacpan.org/release/Devel-GlobalDestruction-XS
+  * Release as Alt::Devel::GlobalDestruction::XS::Inline
