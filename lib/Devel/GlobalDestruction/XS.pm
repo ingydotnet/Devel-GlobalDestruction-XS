@@ -1,7 +1,7 @@
 use strict; use warnings;
 package Devel::GlobalDestruction::XS;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Devel::GlobalDestruction::XS::Inline
     C => 'lib/Devel/GlobalDestruction/XS.c';
