@@ -12,12 +12,18 @@ my %WriteMakefileArgs = (
   LICENSE => 'perl',
   MIN_PERL_VERSION => '5.008001',
   test => { TESTS => 't/*.t' },
+  postamble => {
+    inline => {
+      module => 'Devel::GlobalDestruction::XS',
+      makestub => 1,
+    },
+  },
   META_MERGE => {
     'meta-spec' => { version => 2 },
     prereqs => {
-        develop => {
-          requires => {
-            'Inline::Module' => '0.27',
+      develop => {
+        requires => {
+          'Inline::Module' => '0.30',
         },
       },
     },
@@ -26,11 +32,6 @@ my %WriteMakefileArgs = (
         'inc',
         'lib/Devel',
       ],
-    },
-  },
-  postamble => {
-    inline => {
-      module => 'Devel::GlobalDestruction::XS',
     },
   },
 );

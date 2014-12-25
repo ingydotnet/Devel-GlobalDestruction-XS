@@ -1,2 +1,2 @@
 package Alt::Devel::GlobalDestruction::XS::Inline;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
