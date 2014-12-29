@@ -36,5 +36,8 @@ my %WriteMakefileArgs = (
   },
 );
 
-WriteMakefile(%WriteMakefileArgs);
+my $alt = $ENV{PERL_ALT_INSTALL} || '';
+$WriteMakefileArgs{DESTDIR} =
+  $alt ? $alt eq 'OVERWRITE' ? '' : $alt : 'no-install-alt';
 
+WriteMakefile(%WriteMakefileArgs);
