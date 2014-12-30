@@ -4,11 +4,12 @@ use lib 'inc';
 use ExtUtils::MakeMaker;
 use Inline::Module;
 
+my $alt = $ENV{PERL_ALT_INSTALL} || '';
 my %WriteMakefileArgs = (
   NAME => 'Alt::Devel::GlobalDestruction::XS::Inline',
   AUTHOR => 'Ingy döt Net <ingy@cpan.org>',
-  VERSION_FROM => 'lib/Devel/GlobalDestruction/XS.pm',
-  ABSTRACT_FROM => 'lib/Devel/GlobalDestruction/XS.pm',
+  VERSION_FROM => 'lib/Alt/Devel/GlobalDestruction/XS/Inline.pm',
+  ABSTRACT => 'Alternate Faster implementation of the Devel::GlobalDestruction API (using Inline::Module)',
   LICENSE => 'perl',
   MIN_PERL_VERSION => '5.008001',
   test => { TESTS => 't/*.t' },
@@ -34,10 +35,7 @@ my %WriteMakefileArgs = (
       ],
     },
   },
+  DESTDIR => $alt ? $alt eq 'OVERWRITE' ? '' : $alt : 'no-install-alt',
 );
-
-my $alt = $ENV{PERL_ALT_INSTALL} || '';
-$WriteMakefileArgs{DESTDIR} =
-  $alt ? $alt eq 'OVERWRITE' ? '' : $alt : 'no-install-alt';
 
 WriteMakefile(%WriteMakefileArgs);
